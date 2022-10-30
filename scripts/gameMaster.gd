@@ -6,13 +6,18 @@ var levelsPath = "res://prefabs/levels/"
 var levels = []
 var currentLevel
 var currentLevelIndex = 0
-var consol = consolPrefab.instance()
+var consol 
+var player
 
 func init():
 	var level = currentLevel.instance()
 	add_child(level)
-	var player = playerPrefab.instance()
+	consol = consolPrefab.instance()
+	add_child(consol)
+	consol.rect_scale = Vector2(1 , 0)
+	player = playerPrefab.instance()
 	add_child(player)
+	consol.player = player
 	#print(get_node("/root/GameMaster/" + levels[currentLevelIndex].substr(0, levels[currentLevelIndex].length() - 5) + "/spawnPoint/").global_transform)
 	player.transform = get_node("/root/GameMaster/" + levels[currentLevelIndex].substr(0, levels[currentLevelIndex].length() - 5) + "/spawnPoint/").transform
 	player.scale = Vector3(1, 1, 1)
@@ -20,7 +25,7 @@ func init():
 	# Called when the node enters the scene tree for the first time.
 func _ready():
 	levels = list_files_in_directory(levelsPath)
-	add_child(consol)	
+	
 	currentLevel = load( levelsPath + levels[currentLevelIndex])
 	init()
 
@@ -46,3 +51,5 @@ func OnAreaBodyEntered(_body):
 	for i in get_children():
 		i.queue_free()
 	init()
+
+

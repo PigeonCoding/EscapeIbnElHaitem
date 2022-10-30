@@ -10,7 +10,8 @@ export var test = {
 	"groundSpeedLimit": 3.0,
 	"airAcceleration": 700.0,
 	"airSpeedLimit": 0.8,
-	"groundFriction": 0.9 
+	"groundFriction": 0.9,
+	"speed": 0.0
 }
 
 export var mouseSensitivity = 0.15
@@ -67,33 +68,19 @@ func _physics_process(delta):
 	if global_transform.origin != oldPos:
 		var Mov = Vector2(global_transform.origin.x - oldPos.x, global_transform.origin.z - oldPos.z)
 		#print(int(Mov.length() * 1000))
-		$PlayerUI/Label.text =  "speed: " + str(int(Mov.length() * 1000))
+		test.speed = int(Mov.length() * 1000)
+		$PlayerUI/Label.text =  "speed: " + str(test.speed)
 		oldPos = global_transform.origin
-  
-	
-	# if Input.is_action_just_pressed("checkpoint"):
-	#     print("Saving Checkpoint: %s / %s" % [self.translation, self.velocity])
-	#     restartTransform = self.global_transform
-	#     restartVelocity = self.velocity	
-	
-	# if Input.is_action_just_pressed("restart"):
-	#     self.global_transform = restartTransform
-	#     self.velocity = restartVelocity
 	
 	pass
-
-func prnt():
-	print("successful")
 
 func _input(event):
 	if Input.is_action_just_pressed("ui_focus_next"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-
-
+	
 	if event is InputEventMouseMotion:
 		$head.rotate_x(deg2rad(event.relative.y * mouseSensitivity * -1))
 		self.rotate_y(deg2rad(event.relative.x * mouseSensitivity * -1))
-
 		# Clamp yaw to [-89, 89] degrees so you can't flip over
 		var yaw = $head.rotation_degrees.x
 		$head.rotation_degrees.x = clamp(yaw, -89, 89)    
