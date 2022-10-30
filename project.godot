@@ -14,6 +14,10 @@ config/name="Escape Ibn El Haitem"
 run/main_scene="res://prefabs/GameMaster.tscn"
 config/icon="res://icon.png"
 
+[debug]
+
+gdscript/warnings/unassigned_variable=false
+
 [gui]
 
 common/drop_mouse_on_gui_input_disabled=true

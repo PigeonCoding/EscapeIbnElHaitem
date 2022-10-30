@@ -6,11 +6,11 @@ var oldPos = Vector3.ZERO
 export var test = {
 	"jumpImpulse": 11.134,
 	"gravity" : -0.55, 
-	"groundAcceleration": 30.0,
-	"groundSpeedLimit": 3.0,
-	"airAcceleration": 700.0,
-	"airSpeedLimit": 0.8,
-	"groundFriction": 0.9,
+	"groundAcceleration": 60.0,
+	"groundSpeedLimit": 5.0,
+	"airAcceleration": 1400.0,
+	"airSpeedLimit": 1.2,
+	"groundFriction": 0.3,
 	"speed": 0.0
 }
 

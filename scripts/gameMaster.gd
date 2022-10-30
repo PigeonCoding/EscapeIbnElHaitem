@@ -20,7 +20,7 @@ func init():
 	consol.player = player
 	#print(get_node("/root/GameMaster/" + levels[currentLevelIndex].substr(0, levels[currentLevelIndex].length() - 5) + "/spawnPoint/").global_transform)
 	player.transform = get_node("/root/GameMaster/" + levels[currentLevelIndex].substr(0, levels[currentLevelIndex].length() - 5) + "/spawnPoint/").transform
-	player.scale = Vector3(1, 1, 1)
+	player.scale = Vector3(1.5, 1.5, 1.5)
 	
 	# Called when the node enters the scene tree for the first time.
 func _ready():
