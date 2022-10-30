@@ -82,8 +82,11 @@ func _physics_process(delta):
 	
 	pass
 
+func prnt():
+	print("successful")
+
 func _input(event):
-	if Input.is_action_just_pressed("ui_cancel"):
+	if Input.is_action_just_pressed("ui_focus_next"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
 
