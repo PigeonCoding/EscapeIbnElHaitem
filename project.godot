@@ -11,8 +11,14 @@ config_version=4
 [application]
 
 config/name="Escape Ibn El Haitem"
-run/main_scene="res://prefabs/GameMaster.tscn"
+run/main_scene="res://prefabs/blank.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+UsefulShit="*res://scripts/usefulShit.gd"
+Consol="*res://prefabs/consol.tscn"
+GameMaster="*res://scripts/gameMaster.gd"
 
 [debug]
 

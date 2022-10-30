@@ -12,7 +12,7 @@ var shown = false
 var commands = {
 	"test": [funcref(self, "prnt"), "", "shit not done lol"],
 	"reload": [funcref(self, "reloadCurrentScene"), "", "reloaded scene"],
-	"test2": [funcref(self, "prnt"), "", "shit not done 2"],
+	"hello": [funcref(self, "prnt"), "", "hello world!"],
 	"help": [funcref(self, "prnt"), "", ""]
 }
 
@@ -28,12 +28,6 @@ func _ready():
 		else:
 			editInput = i
 
-func array_to_string(arr: Array) -> String:
-	var s = ""
-	for i in arr:
-		s += String(i) + ", "
-	return s
-
 func logg(strr):
 	for i in text.size():
 		if text[i].text != "" and i - 2 >= 0:
@@ -46,9 +40,8 @@ func logg(strr):
 			if strr != "help":
 				text[text.size() - 1].text = commands[strr][2]
 			else:
-				text[text.size() - 1].text = array_to_string(commands[strr][2])
-		elif strr != "" and !(strr in commands):
-			text[text.size() - 1].text = "command not found"
+				text[text.size() - 1].text = UsefulShit.array_to_string(commands[strr][2])
+#		elif strr != "" and !(strr in commands):
 		editInput.text = ""
 		currentInput = ""
 		strr = ""

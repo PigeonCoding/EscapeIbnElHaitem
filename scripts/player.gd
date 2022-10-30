@@ -1,6 +1,5 @@
 extends KinematicBody
 
-var speed = 0.0
 var oldPos = Vector3.ZERO
 
 export var test = {
@@ -8,9 +7,9 @@ export var test = {
 	"gravity" : -0.55, 
 	"groundAcceleration": 60.0,
 	"groundSpeedLimit": 5.0,
-	"airAcceleration": 1400.0,
-	"airSpeedLimit": 1.2,
-	"groundFriction": 0.3,
+	"airAcceleration": 1600.0,
+	"airSpeedLimit": 0.9,
+	"groundFriction": 0.9,
 	"speed": 0.0
 }
 

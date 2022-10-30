@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/school.fbx-0a9b8bb24b3245b67838bf74c8757a20.scn"
+path="res://.import/testingWorld.gltf-40952da92057f672031a55d89340a614.scn"
 
 [deps]
 
-source_file="res://prefabs/3d/school.fbx"
-dest_files=[ "res://.import/school.fbx-0a9b8bb24b3245b67838bf74c8757a20.scn" ]
+source_file="res://shit/testingWorld.gltf"
+dest_files=[ "res://.import/testingWorld.gltf-40952da92057f672031a55d89340a614.scn" ]
 
 [params]
 
