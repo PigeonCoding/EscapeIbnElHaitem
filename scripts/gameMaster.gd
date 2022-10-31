@@ -15,7 +15,7 @@ func init():
 	add_child(player)
 	Consol.player = player
 	player.transform = get_node("/root/GameMaster/" + levels[currentLevelIndex].substr(0, levels[currentLevelIndex].length() - 5) + "/spawnPoint/").transform
-	player.scale = Vector3(1.5, 1.5, 1.5)
+	player.scale = Vector3(1.25, 1.25, 1.25)
 
 func start():
 	currentLevel = load( levelsPath + levels[currentLevelIndex])

@@ -3,14 +3,15 @@ extends KinematicBody
 var oldPos = Vector3.ZERO
 
 export var test = {
-	"jumpImpulse": 11.134,
+	"jumpImpulse": 12,
 	"gravity" : -0.55, 
-	"groundAcceleration": 60.0,
-	"groundSpeedLimit": 5.0,
+	"groundAcceleration": 100.0,
+	"groundSpeedLimit": 10.0,
 	"airAcceleration": 1600.0,
 	"airSpeedLimit": 0.9,
-	"groundFriction": 0.9,
-	"speed": 0.0
+	"groundFriction": 0.8,
+	"speed": 0.0,
+	"fov": 90.0
 }
 
 export var mouseSensitivity = 0.15
@@ -21,6 +22,7 @@ var restartTransform
 var restartVelocity
 
 func _ready():
+	$head/Camera.fov = test.fov
 	restartTransform = self.global_transform
 	restartVelocity = self.velocity
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
