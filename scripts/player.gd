@@ -10,8 +10,8 @@ export var test = {
 	"airAcceleration": 1600.0,
 	"airSpeedLimit": 0.9,
 	"groundFriction": 0.8,
+	"fov": 90.0,
 	"speed": 0.0,
-	"fov": 90.0
 }
 
 export var mouseSensitivity = 0.15
