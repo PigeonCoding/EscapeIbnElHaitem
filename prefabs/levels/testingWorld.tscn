@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://prefabs/spawnPoint.tscn" type="PackedScene" id=1]
 [ext_resource path="res://textures/darkTex.tres" type="Material" id=2]
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://prefabs/EndPoint.tscn" type="PackedScene" id=4]
 
 [node name="testingWorld" type="Spatial"]
@@ -192,3 +193,6 @@ use_in_baked_light = true
 polygon = PoolVector2Array( -29.444, -0.354, -29.722, 24.414, -10.0847, 13.0678, 6.67788, 0.460548 )
 depth = 20.4
 material = ExtResource( 2 )
+
+[node name="Player" parent="school" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 230.94, 158.339, -25.0421 )

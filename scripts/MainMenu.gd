@@ -1,7 +1,9 @@
 extends Control
 
+func _ready():
+	Consol.loggMsg("Main Menu")
+	pass
 
 func OnStartButtonPressed():
-	Consol.logg("main menu!!!")
 	GameMaster.currentLevelIndex += 1
 	GameMaster.start()
