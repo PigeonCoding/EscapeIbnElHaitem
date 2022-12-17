@@ -1,6 +1,6 @@
 extends Spatial
 
-var playerPrefab = preload("res://Player/Player.tscn")
+var playerPrefab = preload("res://player/Player.tscn")
 #var consolPrefab = preload("res://prefabs/consol.tscn")
 var levelsPath = "res://prefabs/levels/"
 var levels = []
