@@ -1,0 +1,6 @@
+[submodule "PigeonConsole"]
+	path = PigeonConsole
+	url = https://github.com/PigeonCoding/PigeonConsole
+[submodule "addons/PigeonConsole"]
+	path = addons/PigeonConsole
+	url = https://github.com/PigeonCoding/PigeonConsole
